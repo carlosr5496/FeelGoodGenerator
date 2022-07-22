@@ -1,3 +1,9 @@
+document.addEventListener("click", () => console.log('JokeBtn clicked!'))
+
+const genJoke = (e) => {
+    
+}
+
 let apiData = fetch("https://v2.jokeapi.dev/joke/Any"
 // , {
 //     method: 'GET',
@@ -19,6 +25,8 @@ let apiData = fetch("https://v2.jokeapi.dev/joke/Any"
 })
 .then(data => JSON.stringify(data))
 .catch(error => console.log("ERROR"));
+
+
 
 
 

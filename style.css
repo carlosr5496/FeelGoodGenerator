@@ -1,4 +1,21 @@
-* {
+body {
+    background: white;
+    margin-left: auto;
+    margin-right:auto;
     height: 100vh;
-    width: 100vw;
+    width: 100vh;
+}
+
+h2 {
+    margin: auto;
+    border:1px solid chartreuse
+}
+
+h3 {
+    margin: auto;
+    border: 1px solid black;
+
+}
+#jokeBtn {
+    padding-left: 20px
 }
