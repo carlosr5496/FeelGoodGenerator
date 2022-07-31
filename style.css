@@ -1,30 +1,116 @@
+*{
+    box-sizing:border-box;
+}
+
+
+/*body of content*/
 
 
 body {
-    padding: 10px;
-    background-color: white;
-    margin-left: auto;
-    margin-right:auto;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font: 12px "Lucida Grande", "Helvetica Neue", Helvetica, "Arial Unicode MS", "Arial Unicode", Arial, sans-serif;
+    color: #333;
 }
+
+/*headers*/
 
 h2 {
-    contain:content;
+    font-size: 20px;
     text-align: center;
-    align-content: center;
-    margin: auto;
-    padding:10px;
-    border:1px solid chartreuse;
-    border-radius: 24px;
-    border-width: medium;
+    margin:0px;
+    padding:3px;
+   box-sizing:border-box;
+    width: 100%;
+    background-color: lightgreen;
 }
 
+
 h3 {
+    box-sizing: content-box;
+    margin: 2px;
+    /* width: 33%; */
+    background-color: #f24356;
     text-align: center;
+    font-size: 18px;
+    /* float:left; */
     contain: content;
     border: 1px solid black;
     border-radius: 24px;
+    padding: 15px;
 
 }
+
+h4 {
+    /* float: left; */
+    margin: 2px;
+    /* width: 33%; */
+    background-color: #f24356;
+    text-align: center;
+    font-size: 18px;
+    block-size: fit-content;
+    contain: content;
+    border: 1px solid black;
+    border-radius: 24px;
+    padding: 15px;
+
+}
+
+h5 {
+
+    margin: 2px;
+    /* width: 33%; */
+    background-color: #f24356;
+    text-align: center;
+    font-size: 18px;
+    block-size: fit-content;
+    contain: content;
+    border: 1px solid black;
+    border-radius: 24px;
+    padding: 15px;  
+}
+
+/*buttons*/
+
+.randomize {
+    margin-top: 4px;
+    display: flex;
+    float: right;
+}
+
 .newJoke {
-    padding-left: 20px;
+    color: blue;
+}
+
+.newJoke:hover {
+    background-color: rgb(54,222,222);
+    transition: background-color .5s;
+}
+.nsfwJoke {
+    color: blue;
+}
+.nsfwJoke:hover {
+    background-color: rgb(54,222,222);
+    transition: background-color .5s;
+}
+
+
+ /* appended jokes */
+.x {
+    /* display: flow-root; */
+    /* display: inline-block; */
+}
+ 
+img {
+    size: 50px;
+}
+
+p {
+    
+    contain: content;
+    margin-top: 18px;
+    border: 1px solid black;
+    background-color: lightblue;
+
 }

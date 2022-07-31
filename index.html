@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
   <script src="index.js" defer></script>
-  <title>Quote Your Moping</title>
+  <title>Joke generator</title>
 
 </head>
+
 <body>
-  <div>
-    <button class="randomize" id="background">Randomize background</button>
-  </div>
-  <h2>Whether you're feeling happy, sad, or anywhere in between</h2>
-
-
-  <div>
-  <h3 id="req">Give Yourself a Laugh!
-    <button type="button" class="newJoke">New Joke</button>
+  <h2><strong>Choose the type of joke that meets your standards!</strong></h2>
+  <div style="display: flex;">
   
-  </h3> 
+  <h3 class="safeJokes" id="box1">Safe for most users
+    <button type="button" class="newJoke X" id="safeJoke">New Joke</button>
+  </h3>
+  
+  <h4 class="nsfwJokes" id="box2">Not for the feint of heart!
+    <button type="button" class="nsfwJoke X">NSFW Joke</button>
+  </h4>
+  
+  <h5 class="catAPI">Show me some cats
+    <button type="button" class="catBtn X">CAT PIC</button>
+    <img src="">
+  </h5>
+  
+  
   </div>
+
 </body>
+
 </html>
