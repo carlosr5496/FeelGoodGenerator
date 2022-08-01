@@ -63,6 +63,7 @@ const memeAPI = function() {
 
         console.log(url);
         image.src = url;
+        
         // image.innerText = data.url;
     })
 }

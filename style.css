@@ -1,10 +1,9 @@
-*{
-    box-sizing:border-box;
-}
 
 
 /*body of content*/
-
+*{
+    height:min-content
+}
 
 body {
     margin: 0;
@@ -12,26 +11,32 @@ body {
     color: #000;
     font: 12px "Lucida Grande", "Helvetica Neue", Helvetica, "Arial Unicode MS", "Arial Unicode", Arial, sans-serif;
     color: #333;
+   background-image: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg');
+    image-rendering: auto;
 }
 
 /*headers*/
 
 h2 {
+    text-emphasis:black;
+    color: black;
     font-size: 20px;
     text-align: center;
-    margin:0px;
+    margin:2px;
     padding:3px;
    box-sizing:border-box;
     width: 100%;
-    background-color: lightgreen;
+    background-color: rgba(151,151,151, .6);
+
 }
 
 
 h3 {
-    box-sizing: content-box;
+   
+    box-sizing: border-box;
     margin: 2px;
-    /* width: 33%; */
-    background-color: #f24356;
+    width: 33%;
+    background-color: #ac1fb0;
     text-align: center;
     font-size: 18px;
     /* float:left; */
@@ -43,9 +48,9 @@ h3 {
 }
 
 h4 {
-    /* float: left; */
+/*     float: left; */
     margin: 2px;
-    /* width: 33%; */
+    width: 33%;
     background-color: #f24356;
     text-align: center;
     font-size: 18px;
@@ -60,7 +65,7 @@ h4 {
 h5 {
 
     margin: 2px;
-    /* width: 33%; */
+    width: 33%;
     background-color: #f24356;
     text-align: center;
     font-size: 18px;
@@ -73,44 +78,62 @@ h5 {
 
 /*buttons*/
 
-.randomize {
-    margin-top: 4px;
-    display: flex;
-    float: right;
-}
+
 
 .newJoke {
-    color: blue;
+    
+    background-color:red;
+    color: #fff;
+    border:none;
+    border-radius:10px;
+    box-shadow: 0px 0px 4px 4px rgb(115,245,145);
 }
 
 .newJoke:hover {
-    background-color: rgb(54,222,222);
+    background-color: black;
     transition: background-color .5s;
 }
 .nsfwJoke {
-    color: blue;
+    font-style:italic;
+    background-color:red;
+    color: #fff;
+    border:none;
+    border-radius:10px;
+    box-shadow: 0px 0px 4px 4px rgb(115,245,145);
 }
 .nsfwJoke:hover {
-    background-color: rgb(54,222,222);
+    background-color: black;
+    transition: background-color .5s;
+}
+
+.catBtn {
+    color: blue;
+    background-color:red;
+    color: #fff;
+    border:none;
+    border-radius:10px;
+    box-shadow: 0px 0px 4px 4px rgb(115,245,145);
+}
+.catBtn:hover {
+    background-color: black;
     transition: background-color .5s;
 }
 
 
  /* appended jokes */
-.x {
-    /* display: flow-root; */
-    /* display: inline-block; */
-}
  
 img {
-    size: 50px;
+  margin: 18px 0px 0px 0px;
+  object-fit:contain;
+  max-width:50%;
+  height: auto;
 }
 
 p {
-    
+    padding: 5px;
     contain: content;
     margin-top: 18px;
     border: 1px solid black;
-    background-color: lightblue;
+    background-color: white;
 
 }
