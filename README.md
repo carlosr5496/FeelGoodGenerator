@@ -2,12 +2,15 @@
 
 This application is built around offering a quick laugh to those who may need. Whether it is work, family, or anything else that comes in life; surely, you will crack a smile!
 
-## Features
+## Requirement
+- Have json-server installed. 
+
+### Features
 
  ***This application contains two main buttons***:
 * Generate Joke Button - When clicked - Will generate a new joke. Two main categories include 'NSFW (Not Safe For Work)' and 'Safe For All Users'. Each button is labeled to reflect which category the joke will be generated from. 
 
-* Refresh button - When clicked - Will remove all currently displayed jokes from the category of which it was generated. There is two refresh buttons located at the top of both Joke Buttons.
+* Refresh button - When clicked - Will remove all currently displayed jokes from the category of which it was generated. There are two refresh buttons located next to the generate Joke Buttons.
 
 **Seperate Button for added content**
 
