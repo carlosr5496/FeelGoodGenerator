@@ -2,7 +2,7 @@
 
 /*body of content*/
 *{
-    height:min-content
+    height:min-content;
 }
 
 body {
@@ -13,6 +13,7 @@ body {
     color: #333;
    background-image: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg');
     image-rendering: auto;
+    
 }
 
 /*headers*/
@@ -20,7 +21,7 @@ body {
 h2 {
     text-emphasis:black;
     color: black;
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
     margin:2px;
     padding:3px;
@@ -32,11 +33,11 @@ h2 {
 
 
 h3 {
-   
+    color: black;
     box-sizing: border-box;
     margin: 2px;
     width: 33%;
-    background-color: #ac1fb0;
+    background-color: rgba(172,31,176, .75);
     text-align: center;
     font-size: 18px;
     /* float:left; */
@@ -49,9 +50,10 @@ h3 {
 
 h4 {
 /*     float: left; */
+    color: black;
     margin: 2px;
     width: 33%;
-    background-color: #f24356;
+    background-color: rgba(242,67,86, .75);
     text-align: center;
     font-size: 18px;
     block-size: fit-content;
@@ -63,10 +65,10 @@ h4 {
 }
 
 h5 {
-
+    color: black;
     margin: 2px;
     width: 33%;
-    background-color: #f24356;
+    background-color: rgba(242,67,86, .85);
     text-align: center;
     font-size: 18px;
     block-size: fit-content;
@@ -81,7 +83,7 @@ h5 {
 
 
 .newJoke {
-    
+    margin-top: 10px;
     background-color:red;
     color: #fff;
     border:none;
@@ -90,10 +92,12 @@ h5 {
 }
 
 .newJoke:hover {
+    cursor: pointer;
     background-color: black;
     transition: background-color .5s;
 }
 .nsfwJoke {
+    margin-top: 10px;
     font-style:italic;
     background-color:red;
     color: #fff;
@@ -102,11 +106,13 @@ h5 {
     box-shadow: 0px 0px 4px 4px rgb(115,245,145);
 }
 .nsfwJoke:hover {
+    cursor: pointer;
     background-color: black;
     transition: background-color .5s;
 }
 
 .catBtn {
+    margin-top: 10px;
     color: blue;
     background-color:red;
     color: #fff;
@@ -115,14 +121,21 @@ h5 {
     box-shadow: 0px 0px 4px 4px rgb(115,245,145);
 }
 .catBtn:hover {
+    cursor: pointer;
     background-color: black;
     transition: background-color .5s;
+}
+
+.resetBtn {
+    margin: 10px;
+    
 }
 
 
  /* appended jokes */
  
 img {
+   
   margin: 18px 0px 0px 0px;
   object-fit:contain;
   max-width:50%;
@@ -130,6 +143,8 @@ img {
 }
 
 p {
+    box-sizing: border-box;
+    border-radius: 20px 20px 20px 20px;
     padding: 5px;
     contain: content;
     margin-top: 18px;

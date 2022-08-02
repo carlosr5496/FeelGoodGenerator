@@ -11,6 +11,13 @@ const targetApiJoke = () => {
             let copyJoke = data.joke;
             let h3 = document.querySelector('h3');
             let newJoke = document.createElement('p');
+            const resetBtn = document.querySelector('#h3Reset');
+
+            resetBtn.addEventListener('click', () =>
+
+                h3.removeChild(newJoke)
+            );
+
             h3.append(newJoke);
             newJoke.innerText = copyJoke;
 
@@ -32,11 +39,15 @@ const targetNsfwJoke = function () {
             let nsfwJoke = data.joke;
             let h4 = document.querySelector('h4');
             let newJoke = document.createElement('p');
-            let deleteBtn = document.createElement('button');
-            deleteBtn.innerText = 'X';
+            const resetBtn = document.querySelector('#h4Reset');
+
+            resetBtn.addEventListener('click', () =>
+
+                h4.removeChild(newJoke)
+            );
+
             h4.append(newJoke);
-            newJoke.innerText = nsfwJoke ;
-            h4.insertAdjacentElement('beforeend', deleteBtn);
+            newJoke.innerText = nsfwJoke;
 
             console.log(nsfwJoke);
         })
@@ -44,28 +55,28 @@ const targetNsfwJoke = function () {
         .catch(error => console.log(error))
 };
 
-const memeAPI = function() {
+const memeAPI = function () {
     fetch('https://api.thecatapi.com/v1/images/search')
-    .then(resp => resp.json())
-    .then(data => {
-        const image = document.querySelector('img');
-        //destructure json array, taking out the URL variable
-        /* [{
-            "id": "6r6",
-            "url": "https://cdn2.thecatapi.com/images/6r6.jpg",
-            "width": 2736,
-            "height": 3648
-            }]
-         */
-        const {url} = data[0];
-        // const url = data[0].url;
+        .then(resp => resp.json())
+        .then(data => {
+            const image = document.querySelector('img');
+            //destructure json array, taking out the URL variable
+            /* [{
+                "id": "6r6",
+                "url": "https://cdn2.thecatapi.com/images/6r6.jpg",
+                "width": 2736,
+                "height": 3648
+                }]
+             */
+            const { url } = data[0];
+            // const url = data[0].url;
 
 
-        console.log(url);
-        image.src = url;
-        
-        // image.innerText = data.url;
-    })
+            console.log(url);
+            image.src = url;
+
+            // image.innerText = data.url;
+        })
 }
 
 
@@ -73,10 +84,10 @@ const memeAPI = function() {
 
 
 
-const handleDelete = () => {
-    deleteBtn.addEventListener('click', () => {
-
-    })
+const h3Reset = () => {
+    const deleteBtn = document.querySelector('#h3Reset');
+    let resetTarget = document.querySelector('h3');
+    deleteBtn.addEventListener('click', () => resetTarget.removeChild())
 }
 
 // Variable handling the Joke button with click event
@@ -95,7 +106,7 @@ nsfwBtn.addEventListener('click', () => {
 })
 
 const catImg = document.querySelector('.catBtn');
-catImg.addEventListener('click', () =>{
+catImg.addEventListener('click', () => {
     return memeAPI();
 })
 
@@ -106,3 +117,24 @@ document.addEventListener('DOMContentLoaded', () => console.log('dom loaded'))
 
 
 
+// const targetNsfwJoke = function () {
+//     fetch('https://v2.jokeapi.dev/joke/Dark?blacklistFlags=religious,political,racist,sexist&type=single')
+
+//         .then(res => res.json())
+
+//         .then(data => {
+//             JSON.stringify(data);
+//             let nsfwJoke = data.joke;
+//             let h4 = document.querySelector('h4');
+//             let newJoke = document.createElement('p');
+//             let deleteBtn = document.createElement('button');
+//             deleteBtn.innerText = 'X';
+//             h4.append(newJoke);
+//             newJoke.innerText = nsfwJoke ;
+//             h4.insertAdjacentElement('beforeend', deleteBtn);
+
+//             console.log(nsfwJoke);
+//         })
+
+//         .catch(error => console.log(error))
+// };
