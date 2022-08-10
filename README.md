@@ -1,4 +1,4 @@
-# Joke Generator
+# Feel Good Generator
 
 This application is built around offering a quick laugh to those who may need it. Whether your humor is more G-rated, or leans towards a darker side; this is sure to give you a quick laugh and smile! 
 
