@@ -36,6 +36,7 @@ const targetNsfwJoke = function () {
 
         .then(data => {
             JSON.stringify(data);
+            console.log(data, typeof data);
             let nsfwJoke = data.joke;
             let h4 = document.querySelector('h4');
             let newJoke = document.createElement('p');
@@ -55,34 +56,51 @@ const targetNsfwJoke = function () {
         .catch(error => console.log(error))
 };
 
-const memeAPI = function () {
+const arr = [];
+
+const catAPI = function () {
     fetch('https://api.thecatapi.com/v1/images/search')
         .then(resp => resp.json())
         .then(data => {
             const image = document.querySelector('img');
-            //destructure json array, taking out the URL variable
-            /* [{
-                "id": "6r6",
-                "url": "https://cdn2.thecatapi.com/images/6r6.jpg",
-                "width": 2736,
-                "height": 3648
-                }]
-             */
+
             const { url } = data[0];
-            // const url = data[0].url;
-
-
             console.log(url);
             image.src = url;
-
-            // image.innerText = data.url;
+            // map 
+            arr.push(data.map(img => img.url));
+            console.log(arr)
+            
         })
-}
+    }
+    
+    
+    
+    //destructure json array, taking out the URL variable
+    /* [{
+        "id": "6r6",
+        "url": "https://cdn2.thecatapi.com/images/6r6.jpg",
+        "width": 2736,
+        "height": 3648
+        }]
+     */
+    
+const imgSource = document.querySelector('.imgSource');
+imgSource.addEventListener('click', () => {
+        let urlSource = "";
 
 
-//Create delete button with click event
+    // 1) declare an empty string
+    // 2) loop array and push value into string, separate by \n
+    // 3) alert the string 
+
+    arr.forEach(url => {
+        urlSource += url.toString() + '\n';
+    } )
+    alert(`Here are image sources:` + `\n` + urlSource);
 
 
+})
 
 const h3Reset = () => {
     const deleteBtn = document.querySelector('#h3Reset');
@@ -107,34 +125,9 @@ nsfwBtn.addEventListener('click', () => {
 
 const catImg = document.querySelector('.catBtn');
 catImg.addEventListener('click', () => {
-    return memeAPI();
+    return catAPI();
 })
 
 
-// NSFW api
 
-document.addEventListener('DOMContentLoaded', () => console.log('dom loaded'))
-
-
-
-// const targetNsfwJoke = function () {
-//     fetch('https://v2.jokeapi.dev/joke/Dark?blacklistFlags=religious,political,racist,sexist&type=single')
-
-//         .then(res => res.json())
-
-//         .then(data => {
-//             JSON.stringify(data);
-//             let nsfwJoke = data.joke;
-//             let h4 = document.querySelector('h4');
-//             let newJoke = document.createElement('p');
-//             let deleteBtn = document.createElement('button');
-//             deleteBtn.innerText = 'X';
-//             h4.append(newJoke);
-//             newJoke.innerText = nsfwJoke ;
-//             h4.insertAdjacentElement('beforeend', deleteBtn);
-
-//             console.log(nsfwJoke);
-//         })
-
-//         .catch(error => console.log(error))
-// };
+document.addEventListener('DOMContentLoaded', () => console.log('dom loaded'));
