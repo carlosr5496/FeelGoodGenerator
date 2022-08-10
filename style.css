@@ -37,7 +37,7 @@ h3 {
     box-sizing: border-box;
     margin: 2px;
     width: 33%;
-    background-color: rgba(172,31,176, .75);
+    background-color: rgba(231, 61, 166, 0.75);
     text-align: center;
     font-size: 18px;
     /* float:left; */
@@ -53,7 +53,7 @@ h4 {
     color: black;
     margin: 2px;
     width: 33%;
-    background-color: rgba(242,67,86, .75);
+    background-color: rgba(248, 9, 37, 0.75);
     text-align: center;
     font-size: 18px;
     block-size: fit-content;
@@ -68,7 +68,7 @@ h5 {
     color: black;
     margin: 2px;
     width: 33%;
-    background-color: rgba(242,67,86, .85);
+    background-color: rgba(97, 216, 42, 0.85);
     text-align: center;
     font-size: 18px;
     block-size: fit-content;
@@ -114,15 +114,15 @@ h5 {
 .catBtn {
     margin-top: 10px;
     color: blue;
-    background-color:red;
-    color: #fff;
+    background-color: antiquewhite;
+    color: black;
     border:none;
     border-radius:10px;
-    box-shadow: 0px 0px 4px 4px rgb(115,245,145);
+    box-shadow: 0px 0px 4px 4px rgb(25,35,155);
 }
 .catBtn:hover {
     cursor: pointer;
-    background-color: black;
+    background-color: orangered;
     transition: background-color .5s;
 }
 
@@ -130,9 +130,19 @@ h5 {
     margin: 10px;
     
 }
+.resetBtn:hover{
+    cursor: pointer;
+}
+
+.imgSource {
+    margin-left: 4px;
+}
+.imgSource:hover {
+    cursor:pointer;
+}
 
 
- /* appended jokes */
+ /* appended content */
  
 img {
    
