@@ -1,5 +1,6 @@
 
-//Fetch joke and extract only the joke to append to DOM
+// Fetch joke API with a 'safe' category
+// Display the joke to the DOM on each click
 
 const targetApiJoke = () => {
     fetch('https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,explicit,racist,sexist&type=single')
@@ -28,12 +29,13 @@ const targetApiJoke = () => {
 };
 
 
-// const targetNsfwJoke = () => {
+// Fetch joke API with 'dark' category
+// Display the joke to the DOM on each click
+
 const targetNsfwJoke = function () {
     fetch('https://v2.jokeapi.dev/joke/Dark?blacklistFlags=religious,political,racist,sexist&type=single')
 
         .then(res => res.json())
-
         .then(data => {
             JSON.stringify(data);
             console.log(data, typeof data);
@@ -56,18 +58,31 @@ const targetNsfwJoke = function () {
         .catch(error => console.log(error))
 };
 
+// Global variable with empty array - Used for pushing image URLs
+
 const arr = [];
+
+// Fetch cat picture API and display one image per click event
 
 const catAPI = function () {
     fetch('https://api.thecatapi.com/v1/images/search')
         .then(resp => resp.json())
         .then(data => {
             const image = document.querySelector('img');
-
+            
+            //destructure json array, taking out the URL variable
+            /* [{
+                "id": "6r6",
+                "url": "https://cdn2.thecatapi.com/images/6r6.jpg",
+                "width": 2736,
+                "height": 3648
+                }]
+             */
             const { url } = data[0];
             console.log(url);
             image.src = url;
-            // map 
+            // map over each URL that has been displayed
+            // push URLs into Global 'arr' variable
             arr.push(data.map(img => img.url));
             console.log(arr)
             
@@ -76,15 +91,7 @@ const catAPI = function () {
     
     
     
-    //destructure json array, taking out the URL variable
-    /* [{
-        "id": "6r6",
-        "url": "https://cdn2.thecatapi.com/images/6r6.jpg",
-        "width": 2736,
-        "height": 3648
-        }]
-     */
-    
+// Button responsible for recently viewed image URLs
 const imgSource = document.querySelector('.imgSource');
 imgSource.addEventListener('click', () => {
         let urlSource = "";
@@ -102,26 +109,35 @@ imgSource.addEventListener('click', () => {
 
 })
 
+// Safe for Most Users reset button
+// Removes all jokes currently displayed 
+
 const h3Reset = () => {
     const deleteBtn = document.querySelector('#h3Reset');
     let resetTarget = document.querySelector('h3');
     deleteBtn.addEventListener('click', () => resetTarget.removeChild())
 }
 
-// Variable handling the Joke button with click event
+// Button for handling 'safe for all users' API fetch
 const safeJokeBtn = document.querySelector('#safeJoke');
 safeJokeBtn.addEventListener('click', () => {
 
-    //Once clicked, fetch to the Joke API will occur
+    //Once clicked API callback function will execute
     console.log('i clicked safe joke');
     return targetApiJoke();
 })
+
+// Not safe for work button 
+// Handles NSFW joke API fetch
 
 const nsfwBtn = document.querySelector('.nsfwJoke');
 nsfwBtn.addEventListener('click', () => {
     console.log('I clicked nsfw')
     return targetNsfwJoke();
 })
+
+// Cat image button
+// Handles cat picture API fetch
 
 const catImg = document.querySelector('.catBtn');
 catImg.addEventListener('click', () => {
