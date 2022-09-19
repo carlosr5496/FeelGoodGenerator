@@ -37,7 +37,7 @@ h3 {
     box-sizing: border-box;
     margin: 1px;
     width: 33%;
-    background-color: rgba(231, 61, 166, 0.75);
+    background-color: rgba(61, 191, 231, 0.53);
     text-align: center;
     font-size: 18px;
     contain: content;
@@ -66,7 +66,7 @@ h5 {
     color: black;
     margin: 1px;
     width: 33%;
-    background-color: rgba(97, 216, 42, 0.85);
+    background-color: rgba(216, 107, 42, 0.84);
     text-align: center;
     font-size: 18px;
     block-size: fit-content;
@@ -82,26 +82,26 @@ h5 {
 
 .newJoke {
     margin-top: 10px;
-    background-color:red;
-    color: #fff;
+    background-color:palevioletred;
+    color: rgb(0, 243, 255);
     border:none;
     border-radius:10px;
-    box-shadow: 0px 0px 4px 4px rgb(115,245,145);
+    box-shadow: 0px 0px 4px 4px rgb(245, 200, 115);
 }
 
 .newJoke:hover {
     cursor: pointer;
-    background-color: black;
+    background-color: #3366fd82;
     transition: background-color .5s;
 }
 .nsfwJoke {
     margin-top: 10px;
     font-style:italic;
-    background-color: purple;
-    color: #fff;
+    background-color: silver;
+    color: rgb(255, 25, 25);
     border:none;
     border-radius:10px;
-    box-shadow: 0px 0px 4px 4px rgb(115,245,145);
+    box-shadow: 0px 0px 4px 4px rgb(115, 178, 245);
 }
 .nsfwJoke:hover {
     cursor: pointer;
@@ -121,7 +121,7 @@ h5 {
 .catBtn:hover {
     cursor: pointer;
     border-color: black;
-    background-color: orangered;
+    background-color: #b13fb5b0;
     transition: background-color .5s;
 }
 
